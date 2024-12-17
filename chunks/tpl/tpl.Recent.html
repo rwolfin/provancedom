@@ -1,0 +1,12 @@
+<div class="item border-no">
+   <figure class="thumb">
+    <a href="[[~[[+id]]]]">
+          <picture>
+            <source type="image/webp" srcset="[[pthumb? &input=`img/class/[[+id]].jpg` &options=`w=450&q=450&f=webp`]]">
+            <source type="image/jpg"  srcset="[[pthumb? &input=`img/class/[[+id]].jpg` &options=`w=450&q=450&f=jpg`]]">
+            <img class="item-img" alt="[[+pagetitle]]" data-lazy="[[pthumb? &input=`img/class/[[+id]].jpg` &options=`w=450&q=450&f=webp`]]" >
+        </picture>
+      </a>
+   <figcaption><a id="name__[[+id]]" href="[[~[[+id]]]]">[[+pagetitle]]</a></figcaption>
+   </figure>
+</div>

@@ -1,0 +1,30 @@
+<svg width="354" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#ffffff" id="canvas_background" height="402" width="356" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+  <g stroke="null" id="svg_16">
+   <g stroke="null" transform="matrix(1.0270740180100955,0,0,1.0341776433222558,-2510.2526928922875,-2987.78544760363) " id="svg_13">
+    <title stroke="#c1c1c1" transform="translate(-13.630955696105957,-0.966951847076416) translate(-2.950535297393799,-4.917558670043945) translate(-12.785652160644531,-1.967023491859436) translate(-26.93691062927246,-19.68466567993164) translate(-102.48179626464844,20.96218490600586) translate(-594.040283203125,-694.2846069335938) translate(3059.282470703125,0) translate(0,3584.5) ">background</title>
+    <rect stroke="#c1c1c1" x="2305.456337" y="2882.641378" width="582" height="402" id="svg_11" fill="#fff"/>
+    <g stroke="null" id="svg_10" display="none">
+     <rect stroke="#c1c1c1" id="svg_14" width="354" height="400" x="2306.456337" y="2883.641378" stroke-width="0" fill="url(#gridpattern)"/>
+    </g>
+   </g>
+   <g stroke="null" transform="matrix(1.0270740180100955,0,0,1.0341776433222558,-2510.2526928922875,-2987.78544760363) " id="svg_15">
+    <title stroke="#c1c1c1" transform="translate(-13.630955696105957,-0.966951847076416) translate(-2.950535297393799,-4.917558670043945) translate(-12.785652160644531,-1.967023491859436) translate(-26.93691062927246,-19.68466567993164) translate(-102.48179626464844,20.96218490600586) translate(-594.040283203125,-694.2846069335938) translate(3059.282470703125,0) translate(0,3584.5) ">Layer 1</title>
+    <g stroke="null" id="svg_8">
+     <path stroke="#c1c1c1" fill="#c1c1c1" d="m2645.457857,3126.612158a116.75373,116.75373 0 1 0 0,-233.50746l-171.87517,0l0,35.31304l44.07839,0l0,162.88138l-44.07839,0l0,35.31304l44.07839,0l0,48.44507l-44.07839,0l0,35.31304l44.07839,0l0,61.79781l35.31304,0l0,-61.79781l106.00201,0l0,-35.31304l-106.00201,0l0,-48.44507l92.48374,0zm-92.48374,-198.19442l92.48374,0a81.44069,81.44069 0 1 1 0,162.88138l-92.48374,0l0,-162.88138z" class="ci-primary" id="svg_9"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

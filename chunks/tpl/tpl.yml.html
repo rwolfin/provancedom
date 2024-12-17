@@ -1,0 +1,23 @@
+<offer id="[[+id]]">
+<name>[[+pagetitle]]</name>
+<vendor>[[#[[+tv.collections]].pagetitle]]</vendor>
+<price>[[+tv.price]]</price>
+<oldprice>[[+tv.oldprice]]</oldprice>
+<currencyId>RUR</currencyId>
+<categoryId>[[+parent]]</categoryId>
+<barcode>[[+tv.code]]</barcode>  
+<country_of_origin>[[+tv.fabricator]]</country_of_origin>
+<url>[[++site_url]][[+uri]]</url>
+<picture>
+    [[getImageList?
+         &docid=`[[+id]]`
+         &tpl=`@CODE:[[++site_url]][[+image]]`
+         &tvname=`img`
+         &limit=`1`
+         ]]
+         </picture>
+<description>
+<![CDATA[ [[+description]]  ]]>
+</description>
+</offer>
+          

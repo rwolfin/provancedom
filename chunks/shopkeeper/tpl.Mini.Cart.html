@@ -1,0 +1,21 @@
+<div class="shop-cart mini-cart" data-shopcart="3">
+    <picture>
+        <source type="image/webp" srcset="[[pthumb? &input=`assets/images/bag.svg` &options=`w=24&q=24&f=webp`]]">
+        <source type="image/jpg" srcset="[[pthumb? &input=`assets/images/bag.svg` &options=`w=100&q=100f=jpg`]]">
+        <img class="svg-icon" src="[[pthumb? &input=`assets/images/bag.svg` &options=`w=24&q=24&f=webp`]]" >
+    </picture>
+   <span class="count">0</span>
+</div>
+<!--tpl_separator-->
+<div class="shop-cart mini-cart" data-shopcart="3">
+    <a class="flex" href="[[+order_page_url]]">
+   <picture>
+                <source type="image/webp" srcset="[[pthumb? &input=`assets/images/bag.svg` &options=`w=24&q=24&f=webp`]]">
+                <source type="image/jpg" srcset="[[pthumb? &input=`assets/images/bag.svg` &options=`w=100&q=100f=jpg`]]">
+                <img class="svg-icon" src="[[pthumb? &input=`assets/images/bag.svg` &options=`w=24&q=24&f=webp`]]" >
+            </picture>
+   
+   <span class="count add">[[+items_total]]</span>
+   </a>
+<!--a href="[[+empty_url]]" id="shk_butEmptyCart">Очистить корзину</a-->
+</div>

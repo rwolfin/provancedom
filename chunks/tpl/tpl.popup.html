@@ -1,0 +1,25 @@
+<div class="item popup popup-[[+id]]">
+   <div class="item-wapper-grid-2">
+       <div class="triangl triangl-[[+id]]"></div>
+          <div>
+             [[getImageList?
+                 &docid=`[[+id]]`
+                 &tpl=`@CODE:<img class="item-img" width="135" height="135" src="[[+image]]">`
+                 &tvname=`img`
+                 &limit=`1`
+             ]]
+          </div>
+      <div>
+         <div class="item-price">
+            <span>[[+tv.price:numformat]][[++old.rub]]</span>
+         </div>
+         <div class="pin-collections"><a href="#">[[#[[+tv.collections]].pagetitle]]</a></div>
+         <div class="pin-pagetitle"><a href="[[~[[+id]]]]">[[+pagetitle]]</a></div>
+         <form action="[[~[[*id]]? &scheme=`abs`]]" method="post">
+            <input type="hidden" name="shk-id" value="[[+id]]" />
+            <input type="hidden" name="shk-count" value="1" />
+            <button type="submit" class="shk-but popup-but">В корзину</button>
+         </form>
+      </div>
+   </div>
+</div>

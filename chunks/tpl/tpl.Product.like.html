@@ -1,0 +1,61 @@
+<div class="item">
+   <a class="thumb-link" href="[[~[[+id]]]]">
+      <div class="items">
+         [[getImageList?
+         &docid=`[[+id]]`
+         &tpl=`@CODE: <img class="item-img" src="[[+image]]" alt="[[+pagetitle]]">`
+         &tvname=`img`
+         &limit=`5`
+         ]]
+      </div>
+   </a>
+   <div class="item-content">
+      <div class="item-favorites">
+         <label class="item-label"><input class="item-favorites-icon" type="checkbox" name="compare" id="compare[[+id]]" value="1" onclick="return shkCompare.toCompare([[+id]],[[+parent]],this)" [[+id:in_compare=`checked="checked"`]] /><span></span></label>
+      </div>
+      <div class="item-collection"><a target="blank" href="[[#[[+tv.collections]].uri]]">[[#[[+tv.collections]].pagetitle]]</a></div>
+      <h3 class="title"><a href="[[~[[+id]]? &scheme=`abs`]]">[[+longtitle]]</a></h3>
+      <div class="item-price">
+         <div class="item-old-price">[[+tv.oldprice:numformat]][[++old.rub]]</div>
+         [[+tv.price:numformat]][[++rub]]
+      </div>
+      {if $_pls['tv.width'] ?}    
+      <div class="item-param hidden-xs">
+         <div class="item-name">
+            Размеры                            
+         </div>
+         <div class="item-values">
+            <div class="item-value-wrapper ">
+               <div class="item-name">Ширина</div>
+               <div class="item-value">
+                  [[+tv.width]] см                        
+               </div>
+            </div>
+            {if $_pls['tv.depth'] ?}
+            <div class="item-value-wrapper ">
+               <div class="item-name">Глубина</div>
+               <div class="item-value">
+                  [[+tv.depth]] см                        
+               </div>
+            </div>
+            {/if}
+            {if $_pls['tv.height'] ?}
+            <div class="item-value-wrapper last">
+               <div class="item-name">Высота</div>
+               <div class="item-value">
+                  [[+tv.height]] см                        
+               </div>
+            </div>
+            {/if}      
+         </div>
+      </div>
+      {/if} 
+   </div>
+   <form action="[[~[[*id]]? &scheme=`abs`]]" method="post">
+      <input type="hidden" name="shk-id" value="[[+id]]" />
+      <input type="hidden" name="shk-count" value="1" />
+      <div class="item-button ">
+         <button type="submit" class="shk-but price-but"> Купить</button>
+      </div>
+   </form>
+</div>

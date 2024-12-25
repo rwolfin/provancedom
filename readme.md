@@ -26,3 +26,25 @@
 * `Resizer` - простой современный ресайзер изображений
 * `shopkeeper3` - компонет интернет магазина 
 * `translit` - дополнение, которое автоматически преобразует кириллицу в латиницу
+
+### Дополнительные поля (TV)
+
+* `[[*article]]`
+* `[[*availability]]`
+* `[[*category]]`
+* `[[*code]]`
+* `[[*collections]]`
+* `[[*colors]]`
+* `[[*depth]]`
+* `[[*diameter]]`
+* `[[*fabricator]]`
+* `[[*guarantee]]`
+* `[[*heft]]`
+* `[[*height]]`
+* `[[*material]]`
+* `[[*oldprice]]`
+* `[[*price]] `
+* `[[*room]]`
+* `[[*style]]`
+* `[[*volume]]`
+* `[[*width]]`

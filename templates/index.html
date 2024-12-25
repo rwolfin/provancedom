@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>[[*longtitle:default=`[[*pagetitle]]`]] - [[++site_name]]</title>
+      <base href="[[!++site_url]]" />
+      <meta charset="[[++modx_charset]]" />
+      <meta name="facebook-domain-verification" content="7s8e9ha7ah79fjqx154o1jci2mifsa" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <meta name="yandex-verification" content="ec2fbc57ab0a0459" />
+      <meta name="description" content="[[*description]]">
+      <link rel="canonical" href="[[++site_url]]" />
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/provancedom.css?ver=[[++assets_version]]">
+      <link rel="preload" as="stylesheet" type="text/css" href="assets/fonts/roboto.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/roboto.css">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/philosopher.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/anahit.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/provance-carousel.css?ver=[[++assets_version]]">
+      [[$fb?]]
+   </head>
+   <body>
+       <!--div id="preloader">
+           <img src="assets/images/preloader.gif">
+       </div-->
+      [[!$header?]]
+      [[*template:is=`1`:then=`[[$slider]]`]]
+      <div class="container hidden-xs">
+         <div class="tabs center">
+            <input type="radio" name="tabs" id="hit" checked="checked">
+            <label class="item-tab" for="hit">Хит продаж</label>
+            <div class="tab">
+               <div class="item-wapper-grid-5">
+                  [[!pdoResources?
+                  &tpl=`tpl.Product`
+                  &parents=`10,11,12,13,14,16,17`
+                  &resources=`582,703,1159,689,751,748`
+                  &limit=`5`
+                  &context=`catalog`
+                  &depth=`100`
+                  &includeTVs=`price,oldprice,width,height,depth,collections,category`
+                  ]]
+               </div>
+            </div>
+            <input type="radio" name="tabs" id="tabone" >
+            <label class="item-tab" for="tabone">Новинки</label>
+            <div class="tab">
+               <div class="item-wapper-grid-5">       
+                  [[pdoResources?
+                  &tpl=`tpl.Product`
+                  &parents=`[[++parents]]`
+                  &resources=`2313,1841,1865,1656,1626,1704,1713,1855,1856,1849,1245,468,840,842,799,1934`
+                  &limit=`5`
+                  &context=`catalog`
+                  &depth=`1`
+                  &includeTVs=`price,oldprice,width,height,depth,collections,category`
+                  ]]
+               </div>
+            </div>
+            <input type="radio" name="tabs" id="tabtwo">
+            <label class="item-tab" for="tabtwo">Рекомендуем</label>
+            <div class="tab">
+               <div class="item-wapper-grid-5">
+                  [[!pdoResources?
+                  &sortby=`RAND()`
+                  &tpl=`tpl.Product`
+                  &parents=`10,11,12,13,14,15,16,17`
+                  &resources=`1138,1139,1249,1229,1799,1766`
+                  &limit=`5`
+                  &context=`catalog`
+                  &depth=`100`
+                  &includeTVs=`price,oldprice,width,height,depth,collections,category`
+                  ]]
+               </div>
+            </div>
+            <input type="radio" name="tabs" id="tabtree">
+            <label class="item-tab" for="tabtree">Скидки</label>
+            <div class="tab">
+               <div class="item-wapper-grid-5">
+                  [[pdoResources?
+                  &parents=`12`
+                  &depth =`100`
+                  &tpl=`tpl.Product`
+                  &limit=`5`
+                  &tvFilters=`collections==315`
+                  &includeTVs=`price,oldprice,width,height,depth,collections,category`
+                  ]]
+               </div>
+            </div>
+         </div>
+         <!--/tabs-->
+      </div>
+      <!--/container-->
+      <div class="container">
+         <div class="page-section">
+            <div class="d9">
+               <h2><span>Популярные Коллекции</span></h2>
+               <div class="arrows"></div>
+            </div>
+            <div class="slider-d9">
+               [[pdoResources?
+               &tpl=`tpl.Recent`
+               &parents=`10`
+               &resources=`24,459,315,187,185,195`
+               &limit=`100`
+               &context=`catalog`
+               &depth=`0`
+               ]]
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="d1">
+            <h3><span>Выбери свой стиль</span></h3>
+         </div>
+         <div class="item-wapper-grid-3">
+            <div class="item-scale">
+               <ul class="hover-effect-scale">
+                  <a class="link-scale" href="[[~195]]">
+                     <li>
+                        <img class="item-img" src="assets/images/scale-1.jpg" alt="">
+                        <div>
+                           <h3>Кантри</h3>
+                        </div>
+                     </li>
+                  </a>
+               </ul>
+            </div>
+            <div class="item-scale-center">
+               <ul class="hover-effect-scale">
+                  <a class="link-scale" href="[[~19]]">
+                     <li>
+                        <img class="item-img" src="assets/images/scale-3.jpg" alt="">
+                        <div>
+                           <h3>Английский</h3>
+                        </div>
+                     </li>
+                  </a>
+               </ul>
+               <ul class="hover-effect-scale">
+                  <a class="link-scale" href="[[~315]]">
+                     <li>
+                        <img class="item-img" src="assets/images/scale-4.jpg" alt="">
+                        <div>
+                           <h3>Классический</h3>
+                        </div>
+                     </li>
+                  </a>
+               </ul>
+            </div>
+            <div class="item-scale">
+               <ul class="hover-effect-scale">
+                  <a class="link-scale" href="[[~504]]">
+                     <li>
+                        <img class="item-img" src="assets/images/scale-2.jpg" alt="">
+                        <div>
+                           <h3>Прованс</h3>
+                        </div>
+                     </li>
+                  </a>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="d2">
+            <h3><span>Индивидуальный заказ</span></h3>
+         </div>
+      </div>
+      <div class="container-fluid item-content-20">
+         <div class="container">
+            <div class="item-wapper-grid-2 item-center">
+               <div class="item-col-l">
+                  <img class="item-img" src="assets/images/bg-2.png">              
+               </div>
+               <div class="item-col-r">
+                  <div class="overview">
+                     <h1 class="title">Изготовим корпусную мебель на заказ</h1>
+                     <p class="description">Эскизный проект — лучший вариант представить, как будет выглядеть мебель! Стоимость проекта рассчитывается индивидуально, исходя из пожеланий заказчика, метража и сроков изготовления эскизного проекта.</p>
+                     <p class="description">Если Вы уже определились с концепцией своего интерьера и выбрали мебель, но у Вас остались вопросы о габаритах или возможных расцветках, наши консультанты всегда помогут Вам абсолютно бесплатно</p>
+                     <a class="link btn" href="https://wa.me/79254548269">Заявка на консультацию &#187;</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="d1">
+            <h3><span>Популярные Интерьеры</span></h3>
+         </div>
+         <div class="slider-room">
+            <div>
+               <img class="item-img" src="img/room-1.jpg">
+               <div class="pin-block">
+                  <span class="pin m1">
+                      [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1852`
+                        ]]
+                   
+                  </span>
+                  <span class="pin m2">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1403`
+                        ]]
+                  </span>
+                  <span class="pin m3">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1851`
+                        ]]  
+                  </span>
+                  <span class="pin m4">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1878`
+                        ]]
+                  </span>
+                  <span class="pin m5">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1961`
+                        ]]
+                  </span>
+                  <span class="pin m6">
+                     [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1849`
+                        ]]
+                  </span>
+               </div>
+            </div>
+            <div>
+               <img class="item-img" src="img/room-2.jpg">
+               <div class="pin-block">
+                  <span class="pin m7">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1969`
+                        ]]
+                  </span>   
+                  <span class="pin m8">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1971`
+                        ]]
+                  </span>
+                  <span class="pin m9">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1970`
+                        ]]
+                  </span>
+                  <span class="pin m10">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1968`
+                        ]]
+                  </span>
+                  <span class="pin m11">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1848`
+                        ]]
+                  </span>
+                  <span class="pin m12">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1972`
+                        ]]
+                  </span>
+               </div>
+            </div>
+            <div>
+               <img class="item-img" src="img/room-3.jpg">
+               <div class="pin-block">
+                   <span class="pin m13">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1681`
+                        ]]
+                   </span>
+                   <span class="pin m14">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1841`
+                        ]]
+                   </span>
+                   <span class="pin m15">
+                        [[pdoResources?
+    	                &tpl=`tpl.popup`
+    	                &includeTVs=`collections,price,img`
+                        &parents=`0`
+    	                &limit=`1`
+    	                &resources=`1973`
+                        ]]
+                   </span>
+                   <span class="pin m16">
+                        [[pdoResources?
+    	                &tpl=`tpl.popup`
+    	                &includeTVs=`collections,price,img`
+                        &parents=`0`
+    	                &limit=`1`
+    	                &resources=`1974`
+                        ]]
+                   </span>
+               </div>       
+            </div>
+            <div>
+               <img class="item-img" src="img/room-4.jpg">
+                 <div class="pin-block">
+                   <span class="pin m17">
+                       [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1966`
+                        ]]
+                   </span>
+                   <span class="pin m18">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1875`
+                        ]]
+                   </span>
+                   <span class="pin m19">
+                       [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1967`
+                        ]]
+                   </span>
+                   <span class="pin m20">
+                       [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1963`
+                        ]]
+                   </span>
+                   <span class="pin m21">
+                        [[pdoResources?
+	                    &tpl=`tpl.popup`
+	                    &includeTVs=`collections,price,img`
+                    	&parents=`0`
+	                    &limit=`1`
+	                    &resources=`1862`
+                        ]]
+                   </span>
+                </div> 
+            </div>
+            <div>
+               <img class="item-img" src="img/room-5.jpg">
+                   <div class="pin-block">
+                       <span class="pin m22">
+                            [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1958`
+                            ]]
+                       </span>
+                       <span class="pin m23">
+                            [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1959`
+                            ]]
+                       </span>
+                       <span class="pin m24">
+                           [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1847`
+                            ]]
+                       </span>
+                       <span class="pin m25">
+                            [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1880`
+                            ]]
+                       </span>
+                       <span class="pin m26">
+                            [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1845`
+                            ]]  
+                       </span>
+                       <span class="pin m27">
+                            [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1879`
+                            ]]
+                       </span>
+                       <span class="pin m28">
+                           [[pdoResources?
+    	                    &tpl=`tpl.popup`
+    	                    &includeTVs=`collections,price,img`
+                        	&parents=`0`
+    	                    &limit=`1`
+    	                    &resources=`1873`
+                            ]]
+                       </span>
+                   </div>       
+            </div>
+         </div>
+      </div>
+      <div class="container hidden-lg">
+         <div class="page-section">
+            <h2>Хит продаж</h2>
+            <div class="sliders">
+               [[!pdoResources?
+               &tpl=`tpl.Slick`
+               &parents=`10,11,12,13,14,16,17`
+               &resources=`582,703,1159,689,751,748`
+               &limit=`20`
+               &context=`catalog`
+               &depth=`100`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div>
+      <div class="container hidden-lg">
+         <h2>Новинки</h2>
+         <div class="sliders">
+            [[pdoResources?
+            &tpl=`tpl.Slick`
+            &parents=`[[++parents]]`
+            &resources=`1841,1865,1656,1626,1704,1713,1855,1856,1849,1245,468,840,842,799,1934`
+            &limit=`100`
+            &context=`catalog`
+            &depth=`1`
+            &includeTVs=`price,oldprice,width,height,depth,category`
+            ]]
+         </div>
+      </div>
+      <div class="container hidden-lg">
+         <h2>Рекомендуем</h2>
+         <div class="sliders">
+            [[!pdoResources?
+            &sortby=`RAND()`
+            &tpl=`tpl.Slick`
+            &parents=`10,11,12,13,14,15,16,17`
+            &resources=`1138,1139,1249,1229,1799,1766`
+            &limit=`20`
+            &context=`catalog`
+            &depth=`100`
+            &includeTVs=`price,oldprice,width,height,depth,category`
+            ]]
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-section">
+            <h2><a class="ref" href="[[~24]]">Коллекция Portland</a></h2>
+            <div class="sliders">
+               [[pdoResources?
+               &tpl=`tpl.Slick`
+               &parents=`12`
+               &depth =`100`
+               &limit=`10`
+               &tvFilters=`collections==24`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-section">
+            <h2><a class="ref" href="[[~459]]">Коллекция Gouache</a></h2>
+            <div class="sliders">
+               [[pdoResources?
+               &parents=`12`
+               &resources=`495,486,492,493,494,496,498,479,472,484`
+               &depth =`100`
+               &tpl=`tpl.Slick`
+               &limit=`15`
+               &tvFilters=`collections==459`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-section">
+            <h2><a class="ref" href="[[~315]]">Коллекция Louvre Home</a></h2>
+            <div class="sliders">
+               [[pdoResources?
+               &parents=`12`
+               &depth =`100`
+               &tpl=`tpl.Slick`
+               &limit=`15`
+               &tvFilters=`collections==315`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="page-section">
+            <h2><a class="ref" href="[[~19]]">Коллекция Belveder</a></h2>
+            <div class="sliders">
+               [[pdoResources?
+               &parents=`12`
+               &depth =`100`
+               &tpl=`tpl.Slick`
+               &limit=`5`
+               &tvFilters=`collections==19`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div>
+      <!--div class="container">
+         <div class="page-section">
+            <h2><a class="ref" href="[[~187]]">Коллекция Bounty Home</a></h2>
+            <div class="sliders">
+               [[pdoResources?
+               &parents=`12`
+               &depth =`100`
+               &tpl=`tpl.Slick`
+               &limit=`10`
+               &tvFilters=`collections==187`
+               &includeTVs=`price,oldprice,width,height,depth,category`
+               ]]
+            </div>
+         </div>
+      </div-->
+      <div class="container hidden-xs">
+         <div class="wrap-triggers flex brands">
+            <div class="item-trigger">
+               <img width="50" height="50" src="[[pthumb? &input=`assets/images/tg-1.png` &options=`w=50&q=50&f=webp`]]">
+               <div>Бесплатная доставка</div>
+            </div>
+            <div class="item-trigger">
+               <img width="50" height="50" src="[[pthumb? &input=`assets/images/tg-2.png` &options=`w=50&q=50&f=webp`]]">
+               <div>Контроль качества</div>
+            </div>
+            <div class="item-trigger">
+               <img width="50" height="50" src="[[pthumb? &input=`assets/images/tg-3.png` &options=`w=50&q=50&f=webp`]]">
+               <div>Скидка до 70%</div>
+            </div>
+            <div class="item-trigger">
+               <img width="50" height="50" src="[[pthumb? &input=`assets/images/tg-4.png` &options=`w=50&q=50&f=webp`]]">
+               <div>Гарантия возврата</div>
+            </div>
+            <div title="Нашли товар дешевле ?" class="item-trigger">
+               <img width="50" height="50" src="[[pthumb? &input=`assets/images/tg-5.png` &options=`w=50&q=50&f=webp`]]">
+               <div>Гарантия лучшей цены</div>
+            </div>
+         </div>
+      </div>
+      
+
+
+      
+      [[$yandex.metrika?]]
+      [[$footer?]]
+      <script src="assets/js/jquery-3.3.1.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/provance-carousel.js"></script>
+      <script>
+         $(document).ready(function() {
+         $(".items").brazzersCarousel();
+         });
+         
+      </script>
+   </body>
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=c9b39c75d14a3e82ee411d2b8fec4980" charset="UTF-8" async></script>
+</html>

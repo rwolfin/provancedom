@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[[*longtitle:default=`[[*pagetitle]]`]] - [[++site_name]]</title>
+    <base href="[[!++site_url]]" />
+    <meta charset="[[++modx_charset]]" />
+    <meta name="description" content="[[*description]]">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+     <link rel="canonical" href="[[++site_url]][[*uri]]"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css?ver=[[++assets_version]]">
+    <link rel="stylesheet" type="text/css" href="assets/css/provancedom.css?ver=[[++assets_version]]">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/roboto.css?ver=[[++assets_version]]">
+    <link rel="stylesheet" type="text/css" href="assets/css/provance-carousel.css?ver=[[++assets_version]]">
+    <meta property="og:title" content="[[*pagetitle]]">
+    <meta property="og:description" content="[[*description]]"/>
+    <meta property="og:url" content="[[++site_url]][[*uri]]">    
+            
+[[$fb?]]
+</head>
+<body>
+
+[[$header?]]    
+
+<div class="container">
+       [[!pdoCrumbs@crumbs]]
+    <section class="post">
+        <h1 class="title">[[*longtitle:default=`[[*pagetitle]]`]]</h1>
+        [[*content]]
+    </section>
+</div>
+
+
+[[$footer?]]
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+[[*id:is=`8`:then=`<script src="assets/js/jquery.phone.js"></script>`]]
+<script src="assets/js/main.js"></script>
+<script src="assets/js/provance-carousel.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $(".items").brazzersCarousel();
+    $('.mask-phone').mask('+7 (999) 999-99-99');
+  });
+  $(document).on('mse2_load', function(e, data) {
+    $(".items").brazzersCarousel();
+  });
+</script>
+
+</body>
+</html>

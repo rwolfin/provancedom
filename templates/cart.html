@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>[[*longtitle:default=`[[*pagetitle]]`]] - [[++site_name]]</title>
+      <base href="[[!++site_url]]" />
+      <meta charset="[[++modx_charset]]" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <meta name="description" content="[[*description]]">
+      
+      <link rel="canonical" href="[[++site_url]][[*uri]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/provancedom.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/zoom.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/roboto.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/fonts/anahit.css?ver=[[++assets_version]]">
+      <link rel="stylesheet" type="text/css" href="assets/css/fancybox.css?ver=[[++assets_version]]">
+      [[$fb?]]
+      <script src="assets/js/jquery-3.3.1.min.js?ver=[[++assets_version]]"></script>
+      <script src="assets/js/main.js?ver=[[++assets_version]]"></script>      
+          
+      <script type="text/javascript">
+         function setBigImage(foto) {
+         document.getElementById("cartSlider").src = foto.src;
+         $("#cartSlider").attr('data-zoom', $(foto).attr('src'));
+         }
+      </script>
+   </head>
+   <body>
+      [[$header?]]
+      <div class="container">
+         [[!pdoCrumbs@crumbs]]
+         <div class="item-cart-product">
+            <a class="hidden-lg back" href="[[~[[*parent]]]]">Назад</a>
+            <div class="item-wapper-grid-3">
+               <div class="grid-aside wapper">
+                  <h1 class="cart-title" data-frontendeditor="longtitle, simple">[[*longtitle:default=`[[*pagetitle]]`]]</h1>
+                  <!--item image-->  
+                  <div class="img"> 
+                     [[getImageList? &limit=`1` &tvname=`img` &tpl=`@CODE:<img class="item-img drift-demo-trigger " src="[[+image]]" id="cartSlider" data-zoom="[[+image]]"  alt="[[+pagetitle]]" />`]]
+                  </div>
+                  <!--item gallery-->   
+                  <div class="item-gallery cart-sliders">
+                     [[getImageList? 
+                        &tvname=`img` 
+                        &tpl=`tpl.image`
+                        &totalVar=`images_count`
+                        &toPlaceholder=`images_out`
+                     ]]
+
+                    [[+images_count:gt=`1`:then=`
+                        [[+images_out]]
+                    `]]
+                  </div>
+               </div>
+               <div class="grid-article item border-no ">
+                  <h2 class="cart-title">Характеристики:</h2>
+                  <div class="detail">
+                     <div class="scroll">
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.article ?}    
+                        <li>Артику:<span class="articul" data-frontendeditor="tv-article, simple">[[*article]]</span></li>
+                        {/if}
+                        {if $_modx->resource.code ?}    
+                        <li>Код товара:<span class="articul">[[*code]]</span></li>
+                        {/if}
+                     </ul>
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.style ?}
+                        <li>Стиль:<span class="link">[[*style]]</span></li>
+                        {/if}
+                        {if $_modx->resource.room ?}    
+                        <li>Комната:<span class="link"><a target="blank" href="[[#[[*room]].uri]]">[[#[[*room]].pagetitle]]</a></span></li>
+                        {/if}
+                        {if $_modx->resource.collections ?}
+                        <li>Коллекция:<span class="link"><a target="blank" href="[[#[[*collections]].uri]]">[[#[[*collections]].pagetitle]]</a></span></li>
+                        {/if}
+                        {if $_modx->resource.category ?}
+                        <li>Категория:<span class="link"><strong>[[*category]]</strong></span></li>
+                        {/if}
+                     </ul>
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.fabricator ?} 
+                        <li>Страна производитель:<span>[[*fabricator]]</span></li>
+                        {/if}
+                        {if $_modx->resource.material ?} 
+                        <li>Материал:<span>[[*material]]</span></li>
+                        {/if}
+                        {if $_modx->resource.colors ?}
+                        <li>Цвет:<span>[[*colors]]</span></li>
+                        {/if}
+                     </ul>
+                     
+                      <ul class="item-cart-ul">
+                    
+                      [[getImageList? 
+                        &tvname=`item` 
+                        &tpl=`@CODE:<li>[[+name]]: <span class="root">[[+value]]</span> <span class="root-color">[[+unit]]</span></li>`
+                      ]]
+                     
+                     </ul>
+                     
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.availability ?}  
+                        <li>Наличие:<span>[[*availability]]</span></li>
+                        {/if}
+                     </ul>
+                     
+                    
+                     
+                     
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.heft ?}     
+                        <li>Вес:<span class="root" data-frontendeditor="tv-heft, simple">[[*heft]] </span><span class="root-color">кг</span></li>
+                        {/if}
+                        {if $_modx->resource.width ?}     
+                        <li>Ширина:<span class="root" data-frontendeditor="tv-width, simple">[[*width]] </span><span class="root-color">см</span></li>
+                        {/if}
+                        {if $_modx->resource.depth ?} 
+                        <li>Глубина:<span class="root" data-frontendeditor="tv-depth, simple">[[*depth]] </span><span class="root-color">см</span></li>
+                        {/if}
+                        {if $_modx->resource.height ?} 
+                        <li>Высота:<span class="root" data-frontendeditor="tv-height, simple">[[*height]] </span><span class="root-color">см</span></li>
+                        {/if}
+                     </ul>
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.diameter ?} 
+                        <li>Диаметр:<span class="root" data-frontendeditor="tv-diameter, simple">[[*diameter]]</span><span class="root-color">см</span></li>
+                        {/if}
+                        {if $_modx->resource.volume ?} 
+                        <li>Объем:<span class="root" data-frontendeditor="tv-volume, simple">[[*volume]] </span><span class="root-color">см</span></li>
+                        {/if} 
+                     </ul>
+                     <ul class="item-cart-ul">
+                        {if $_modx->resource.guarantee ?} 
+                        <li>Гарантия:<span class="root">[[*guarantee]]</span></li>
+                        {/if}
+                     </ul>
+                     <ul class="item-cart-ul">  
+                        {if $_modx->resource.features ?} 
+                        <strong>Особенности:</strong>
+                        [[*features]] 
+                        {/if}  
+                     </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="grid-ads">
+                  <h3 class="cart-title">Заказ:</h3>
+                  <div class="flex price-product">
+                     {if $_modx->resource.oldprice && ($_modx->resource.oldprice > $_modx->resource.price) ?}
+                     <div class="item-old-price">[[*oldprice:numformat]][[++old.rub]]</div>
+                     {/if} 
+                     <div class="item-price"><span data-frontendeditor="tv-price, simple">[[*price:numformat]]</span>
+                         <img class="item-rub" src="[[pthumb? &input=`assets/images/rub.svg` &options=`w=30&q=30&f=webp`]]">
+                     </div>
+                     {if $_modx->resource.oldprice && ($_modx->resource.oldprice > $_modx->resource.price) ?}
+                     [[$etiquette]]
+                     {/if} 
+                  </div>
+                  <div class="shk-item item border-no">
+                     <form action="[[~[[*id]]? &scheme=`abs`]]" method="post">
+                        <input type="hidden" name="shk-id" value="[[*id]]" />
+                        <input type="hidden" name="shk-name" value="[[*pagetitle]]" />
+                        <input type="hidden" name="shk-count" value="1" />
+                        <div class="basked-button">
+                           <button type="submit" role="button" class="price-but btn btn-dandeg btn-lg">Добавить в корзину</button>
+                        </div>
+                     </form>
+                  </div>
+                  <a class="btn btn-dafault" target="blank" href="[[++wp]]">Сообщить о снижении цены</a>
+                  <div class="delivery">
+                     <div class="flex">
+                        <div class="item">
+                           <img class="item-img" src="[[pthumb? &input=`assets/images/ico01.png` &options=`w=75&q=79&f=webp`]]" title="Собственное производство" alt="Собственное производство">
+                        </div>
+                        <div class="item ">
+                           <img class="item-img" src="[[pthumb? &input=`assets/images/ico02.png` &options=`w=75&q=79&f=webp`]]" title="Доставка по всей России" alt="Доставка по всей России">
+                        </div>
+                        <div class="item ">
+                           <img class="item-img" src="[[pthumb? &input=`assets/images/ico03.png` &options=`w=75&q=79&f=webp`]]" title="Свой склад и шоурум" alt="Свой склад и шоурум">
+                        </div>
+                        <div class="item ">
+                           <img class="item-img" src="[[pthumb? &input=`assets/images/ico04.png` &options=`w=75&q=79&f=webp`]]" title="Возврат товара" alt="Возврат товара">
+                        </div>
+                     </div>
+                  </div>
+                  <h4>Способы оплаты:</h4>
+                  <img class="sber" src="assets/images/pay-4.png">
+                  <img class="acco" src="assets/images/pay-5.png">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="tabs item-tabs-cart">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label class="item-tab" for="tabone"><span>Описание</span></label>
+            <div class="tab">
+               <h2>[[*pagetitle]]</h2>
+               <p data-frontendeditor="description, simple">[[*description]]</p>
+            </div>
+            <input type="radio" name="tabs" id="tabtwo">
+            <label class="item-tab" for="tabtwo"><span>Отзывы</span></label>
+            <div class="tab">
+              
+            </div>
+         </div>
+      </div>
+    <div class="border-box"></div>
+     
+    <div class="container">
+          <h2>Из этой серии со скидкой:</h2>
+          <div class="slider-sale">
+            [[pdoResources?
+            &sortby=`RAND()`
+            &parents=`[[*parent]]`
+            &resources=`-[[*id]]`
+            &limit=`100`
+            &tpl=`tpl.Product.series`
+            &includeTVs=`price,oldprice`
+            ]]
+           
+          </div>      
+    </div>  
+    
+    <div class="container">
+  
+        [[addLooked?
+	    &templates = `4`
+	    &limit=`7`
+        ]]
+        [[!looked?
+        &snippet=`pdoResources`
+        &includeTVs=`price, img`
+        &limit=`7`
+        &tplOuter=`tpl.lookedOuterTpl`
+        &tpl=`tpl.lookedTpl`
+       
+        ]]
+  
+      </div>  
+ 
+      <!--div class="container">
+         <h2>Новинки:</h2>
+         <div class="item-wapper">
+            [[pdoResources?
+            &tpl=`tpl.Img.Recent`
+            &depth=`0`
+            &parents=`12`
+            &limit=`6`
+            ]]
+         </div>
+      </div>
+      <div class="container">
+         <h2>Возможно, вам понравится:</h2>
+         <div class="item-wapper">
+            [[pdoResources?
+            &tpl=`tpl.Img.Recent`
+            &depth=`0`
+            &parents=`12`
+            &limit=`6`
+            ]]
+         </div>
+      </div-->
+      [[$footer?]]
+     
+      <script src="assets/js/slick.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="/assets/js/Drift.js"></script>
+    
+      <script>
+         new Drift(document.querySelector(".drift-demo-trigger"), {
+           paneContainer: document.querySelector(".detail"),
+           inlinePane: 900,
+           inlineOffsetY: -85,
+           containInline: true,
+           hoverBoundingBox: true,
+         });
+      </script>
+   </body>
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=c9b39c75d14a3e82ee411d2b8fec4980" charset="UTF-8" async></script>
+</html>
